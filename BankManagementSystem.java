@@ -9,7 +9,7 @@ package LabProject;
 //         • Encapsulation             • Polymorphism + Abstract
 //         • Interfaces                • Nested / Inner Classes
 //         • Generics                  • Exception Handling
-//         • Multithreading  ← UNIQUE SELF-STUDIED TOPIC
+//         • Multithreading
 //           (Session Timer Thread + Password System)
 // ============================================================
 
@@ -661,29 +661,3 @@ public class BankManagementSystem {
         sc.close();
     }
 }
-
-
-// ============================================================
-//  OOP CONCEPTS — WHERE EACH IS USED
-// ============================================================
-//
-//  CONCEPT                  | WHERE USED
-//  ─────────────────────────┼────────────────────────────────────────────
-//  Classes & Objects        | Account, Bank, SessionTimer, AuthHelper, etc.
-//  Constructors             | All classes; password passed in constructor
-//  Static Data/Methods      | Account.bankName, accountCounter; TIMEOUT_SECONDS
-//  Arrays & ArrayLists      | ArrayList<Account> in Bank
-//  Inheritance              | SavingsAccount, CurrentAccount extend Account
-//  Data/Object Casting      | Upcasting to Account; downcasting in applyInterest
-//  Encapsulation            | password field private; verifyPassword() is the only access
-//  Polymorphism + Abstract  | abstract calculateInterest() / getAccountType()
-//  Interfaces               | Transferable → transfer(); Printable → printStatement()
-//  Nested / Inner Classes   | Transaction defined inside Account
-//  Generics                 | TransactionLog<T>
-//  Exception Handling       | AuthException (NEW), InsufficientFundsException, etc.
-//  Multithreading (UNIQUE)  | SessionTimer implements Runnable
-//                           | AtomicBoolean shared between threads
-//                           | Timer thread runs concurrently with main (password input)
-//                           | thread.interrupt() for clean shutdown
-//                           | Daemon thread (auto-killed on exit)
-// ============================================================
